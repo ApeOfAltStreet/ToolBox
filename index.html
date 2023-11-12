@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToolBox</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#webtools">Web Tools</a></li>
+                <li><a href="#media_tools">Media Tools</a></li>
+                <li><a href="#ai_tools">AI Tools</a></li>
+                <li><a href="#generators">Generators</a></li>
+                <li><a href="#dev_tools">Developer Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <div id="webtools" class="tool-section">
+        <h2>Web Tools</h2>
+        <div id="headerExtractor" class="tool">
+            <h3>HTTP Header Extractor</h3>
+            <input type="text" id="urlInput" placeholder="Enter URL">
+            <button onclick="getHeaders()">Get Headers</button>
+            <pre id="headersOutput"></pre>
+        </div>
+    </div>
+
+    <!-- Other tool sections here -->
+</main>
+
+
+    <footer>
+        <p>&copy; 2023 ToolBox Project. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
