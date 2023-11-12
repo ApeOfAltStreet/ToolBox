@@ -1,5 +1,9 @@
 function getHeaders() {
     var url = document.getElementById('urlInput').value;
+
+    // Clear previous response
+    document.getElementById('headersOutput').textContent = '';
+
     fetch('/get_headers', {
         method: 'POST',
         body: new URLSearchParams({'url': url})
@@ -11,4 +15,3 @@ function getHeaders() {
     })
     .catch(error => console.error('Error:', error));
 }
-
